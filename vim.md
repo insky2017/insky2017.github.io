@@ -1,4 +1,20 @@
 
+## Build latest vim
+``` bash
+#!/usr/bin/env bash
+# sudo apt update
+# sudo apt install -y git
+# sudo apt install -y build-essential
+rm -fr /tmp/vim
+git clone https://github.com/vim/vim.git /tmp/vim
+make -C /tmp/vim
+sudo make install -C /tmp/vim 
+rm -fr /tmp/vim
+```
+
+---
+
+
 ## Failed to bring up SpaceVim
 1.  change the default spacevim_plugin_managerin autoload/SpaceVim.vim to neobundle like:
 ``` bash
